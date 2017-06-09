@@ -3163,7 +3163,7 @@ class JIRA(object):
                 return list_lookup(python_to_custom, pythonfieldname)
             else:
                 raise KeyError("Need to provide a custom field name, or a python field name.")
-        except:
+        except KeyError:
             if customfieldname is not None:
                 return customfieldname
             else:
